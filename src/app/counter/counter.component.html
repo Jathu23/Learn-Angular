@@ -1,0 +1,28 @@
+<p>counter works!</p>
+<h3>{{clickcount}} Times Clicked</h3>
+<button (click)="incrementCount()">increment</button>
+<button (click)="decrementCount()">decrement</button>
+
+<h3>ngFor Example</h3>
+<ul>
+    <p *ngFor="let v of vechiles let i = index">{{i+1}} {{v}}</p>
+</ul>
+
+<h3>ngFor variables first&last </h3>
+<ul>
+    <p *ngFor="let v of vechiles let firstvalue= first; let lasvalue = last;">
+   <strong *ngIf="firstvalue">First:</strong> 
+   <strong *ngIf="lasvalue">Last:</strong>
+    {{v}}
+    </p>
+</ul>
+
+<h3>ngFor odd even  Example</h3>
+<ul>
+    <p *ngFor="let v of vechiles let isEven = even; let isodd = odd;" [ngClass]="{'even-item' : isEven, 'odd-item' : isodd}">
+         {{v}}</p>
+</ul>
+
+<label for="">Show h3</label>
+<input type="checkbox" [(ngModel)]="visable">
+<h3 *ngIf="visable">visable h3</h3>
