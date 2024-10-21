@@ -26,3 +26,8 @@
 <label for="">Show h3</label>
 <input type="checkbox" [(ngModel)]="visable">
 <h3 *ngIf="visable">visable h3</h3>
+
+<label for="">Aplay Red</label>
+<input type="checkbox" [(ngModel)]="setRed">
+
+<h4 [ngClass]="{'redtext':setRed}">Sample Text</h4>

@@ -1,4 +1,4 @@
-<h4>{{one_way}}</h4>
+<!-- <h4>{{one_way}}</h4>
 
 <h4>{{two_way}}</h4>
 <input type="text" [(ngModel)]="two_way" >
@@ -7,12 +7,15 @@
 
 <img [src]="imageurl" [alt]="imagealt">
 
-<h5 [textContent]="user.name"></h5>
+<h5 [textContent]="user.name"></h5> -->
+
 <!-- attribute binding with safe navegator oprator -->
-<h5 [textContent]="car?.name"></h5>
+<!-- <h5 [textContent]="car?.name"></h5> -->
 
 
 
-<app-counter></app-counter>
+<!-- <app-counter></app-counter> -->
+<!-- <app-pipeexample></app-pipeexample> -->
 
-
+<app-forms (carAdded)="oncarAdded($event)"></app-forms>
+<app-list [carsName]="carNames"></app-list>

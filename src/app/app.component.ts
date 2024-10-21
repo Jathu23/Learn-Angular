@@ -12,7 +12,7 @@ export class AppComponent {
   two_way = '2-way-binding';
   imageurl ="https://picsum.photos/100";
   imagealt ="img from picsum";
-
+carNames : string[] = [];
 
 
   user: any = {
@@ -26,6 +26,12 @@ export class AppComponent {
     return "hi";
   }
 
+  oncarAdded(carName:string) {
+  if (carName !='') {
+    this.carNames.push(carName);
+  }
+ 
+    }
  
 
   // ngOnint(){

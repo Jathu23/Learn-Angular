@@ -10,6 +10,7 @@ export class CounterComponent {
   clickcount = 0;
    vechiles =["car","van","bus","bike"]
    visable = true;
+setRed = true;
   incrementCount() {
     this.clickcount++;
      }
