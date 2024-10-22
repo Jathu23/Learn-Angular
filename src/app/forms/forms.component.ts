@@ -9,6 +9,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class FormsComponent {
 inputcarname: string ='';
 @Output() carAdded = new EventEmitter<string>();
+users : any= []
 
 onSumit() {
 this.carAdded.emit(this.inputcarname);
@@ -16,7 +17,21 @@ this.inputcarname = '';
 }
 
 myForm = new FormGroup({
-  username: new FormControl('khk')  // Empty default value
+
+  username: new FormControl('userName'), 
+  email: new FormControl('eMail') 
 });
+
+
+onSubmit() {
+  console.log(this.myForm.value);
+
+let user = {
+  name : this.myForm.value.username,
+  email :this.myForm.value.email
+}
+  this.users.push(user)
+  this.myForm.reset();
+}
 
 }

@@ -5,8 +5,19 @@
 </form>
 <br>
 <br>
-<form [formGroup]="myForm">
-    <input type="text" formControlName="username">
+
+<!-- my-form.component.html -->
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()"> <!-- Connect FormGroup here -->
+    <label for="username">Username:</label>
+    <input id="username" formControlName="username"> <!-- Connect username control -->
+    
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email"> <!-- Connect email control -->
+  
     <button type="submit">Submit</button>
   </form>
+
+<ul>
+    <li *ngFor="let user of users">Name: {{user.name}} <br>Email :{{user.email}}</li>
+</ul>  
   
