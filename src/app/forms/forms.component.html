@@ -3,3 +3,10 @@
 <input type="text" [(ngModel)]="inputcarname" name="inputcarname">
 <button type="submit">sumit</button>
 </form>
+<br>
+<br>
+<form [formGroup]="myForm">
+    <input type="text" formControlName="username">
+    <button type="submit">Submit</button>
+  </form>
+  

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-forms',
@@ -13,5 +14,9 @@ onSumit() {
 this.carAdded.emit(this.inputcarname);
 this.inputcarname = '';
 }
+
+myForm = new FormGroup({
+  username: new FormControl('khk')  // Empty default value
+});
 
 }
